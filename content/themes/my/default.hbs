@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" href="{{asset "favicon.png"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/generate.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/responsive.css"}}" />
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato|Open+Sans:400,600|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="alternate" type="application/rss+xml" title="{{@blog.title}}" href="{{@blog.url}}/rss/">
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{!-- {{ghost_head}} --}}
+</head>
+
+<body>
+    <header id="header" class="light normal">
+        <div class="container">
+            <h2 class="logo">
+            <a href="{{@blog.url}}" title="{{@blog.title}}">{{@blog.title}}</a>
+        </h2>
+            <p>{{@blog.description}}</p>
+            <div class="primary-menu">
+                <div class="logo-fixed">
+                    <a href="{{@blog.url}}" title="{{@blog.title}}">{{@blog.title}} </a>
+                </div>
+                <ul id="primary-menu" class="menu">
+                    {{navigation}}
+                </ul>
+            </div>
+            
+            {{> "social-profiles"}}
+            
+            {{!--             
+            <div class="search-box">
+                <form action="index.html">
+                    <input type="text" name="s" placeholder="Search...">
+                    <button>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div> 
+            --}}
+
+            <a href="#" class="menu-mobile-open"><i class="fa fa-bars"></i></a>
+        </div>
+    </header>
+
+    <div id="menu-mobile" style="display: none;">
+        <div class="inner">
+            <a href="#" class="menu-mobile-close"><i class="fa fa-close"></i></a>
+            <ul id="mobile-menu" class="menu">
+                {{navigation}}
+            </ul>
+        </div>
+    </div>
+
+    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {{{body}}}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="copyright-text">
+                        &copy; <a href="{{@blog.url}}">{{@blog.title}}</a> {{date format="YYYY"}} &bull; All rights reserved.
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    {{> "social-profiles"}}
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = 'grishyru';
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="{{asset "js/jquery-2.1.4.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,15 @@
+<nav class="pagination" role="navigation">
+    {{#if prev}}
+        <a href="{{page_url prev}}" class="largeoutline dark wide left">
+            <span class="main">НОВЫЕ ЗАПИСИ</span>
+            <span class="sub"><i class="fa fa-chevron-left"></i></span>
+        </a>
+    {{/if}}
+
+    {{#if next}}
+        <a href="{{page_url next}}" class="largeoutline dark wide right">
+            <span class="main">СТАРЫЕ ЗАПИСИ</span>
+            <span class="sub"><i class="fa fa-chevron-right"></i></span>
+        </a>
+    {{/if}}
+</nav>

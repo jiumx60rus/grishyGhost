@@ -1,0 +1,5 @@
+{{#foreach navigation}}
+    <li role="presentation" {{#if current}}class="current-menu-item" {{/if}}>
+    	<a href="{{url absolute="true"}}">{{label}}</a>
+    </li>
+{{/foreach}}

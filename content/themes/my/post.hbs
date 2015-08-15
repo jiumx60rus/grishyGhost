@@ -1,0 +1,166 @@
+{{!< default}}
+
+
+{{#post}}
+ <article class="post">
+    <div class="featured-image">
+        <a href="{{url}}"><img src="{{image}}"  rel="image_src" alt="{{title}}">
+        </a>
+    </div>
+    <div class="post-content">
+        <div class="post-categories"><a href="
+            {{#foreach tags}}
+                {{#if @first}}
+                    {{url}}
+                {{/if}}
+            {{/foreach}}
+
+        " rel="category tag">{{tags.[0].name}}</a>
+        </div>
+        <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date published_at format="DD MMMM YYYY г."}}</time>
+
+
+        <div class="post-text">
+             {{content}}
+        </div>
+
+        <div class="post-tags">
+            <i class="fa fa-tags"></i>{{tags prefix="Теги: "}}
+        </div>
+
+        <div class="post-meta">
+            <div class="md-share">
+                <div class="socials">
+                    <a target="_blank" href="http://vk.com/share.php?url={{url}}" class="vk">
+                        <i class="fa fa-vk"></i>
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url}}" class="facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a target="_blank" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" class="twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a target="_blank" href="https://plus.google.com/share?url={{url}}" class="google">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a target="_blank" href="//pinterest.com/pin/create/button/?url={{url}}&amp;description={{encode title}};media={{image}}" class="pinterest">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                </div>
+                <a href="#" class="lbl"><i class="fa fa-share-alt"></i>ПОДЕЛИТЬСЯ</a>
+            </div>
+        </div>
+
+        <div class="post-comments">
+
+                <div id="disqus_thread">
+                    <script type="text/javascript">
+                        /* * * CONFIGURATION VARIABLES * * */
+                        var disqus_shortname = 'grishyru';
+                        
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                </div>
+        </div>
+    </div>
+</article>
+{{/post}}
+
+{{!-- 
+{{#post}}
+<div class="featureheader featured">
+    <div class="background" style="background-image: url({{image}})"></div>
+    <a href="{{@blog.url}}" class="logo"><img src="{{asset "logo_white.png"}}" alt="{{@blog.title}}">
+    </a>
+    <div class="wrapper">
+        <div class="title">
+            <h1>Web Workflow: Getting Started with Yeoman &amp; Grunt</h1>
+            <div class="info">
+                <div class="left">
+                    <a href="#" class="date"><i class="fa fa-clock-o"></i>{{date published_at format="DD MMMM YYYY г."}}</a>
+                </div>
+                <div class="right">
+                    <span class="tags">
+                        <i class="fa fa-tags"></i>
+                        {{tags separator=""}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+
+
+    <div class="alternate">
+        <aside>
+            <!-- WIDGET - AUTHOR -->
+            {{#author}}
+            <div class="widget author_widget ">
+                <h3><a href="{{@blog.url}}">{{name}}</a></h3>
+                <a href="{{@blog.url}}" class="author_url">{{@blog.url}}</a>
+                <p>{{@blog.description}}</p>
+            </div>
+            {{/author}}
+            <!-- WIDGET - TAG -->
+            <div class="widget tag_widget">
+                <ul class="tags_list">
+                    {{#foreach tags}}
+                        <li><a href="{{url}}" title="{{name}}">{{name}}</a></li>  
+                    {{/foreach}}
+                </ul>
+            </div>
+           <!-- WIDGET - SOCIAL -->
+            <div class="widget social_widget">
+                <a href="http://github.com" target="_blank" class="social social_outline github"><i class="fa fa-github"></i></a>
+                <a href="http://twitter.com" target="_blank" class="social social_outline twitter"><i class="fa fa-twitter"></i></a>
+                <a href="http://facebook.com" target="_blank" class="social social_outline facebook"><i class="fa fa-vk"></i></a>
+                <a href="http://instagram.com" target="_blank" class="social social_outline instagram"><i class="fa fa-instagram"></i></a>
+                <a href="http://youtube.com" target="_blank" class="social social_outline youtube"><i class="fa fa-youtube"></i></a>
+                <a href="{{@blog.url}}/rss/" target="_blank" class="social social_outline rss"><i class="fa fa-rss"></i></a>
+            </div>
+        </aside>
+    </div>
+    
+    <div class="content">
+        <div class="postlist">
+            <article class="post standard single">
+                {{content}}
+            </article>
+            <div class="comments">
+                <div id="disqus_thread">
+                    <script type="text/javascript">
+                        /* * * CONFIGURATION VARIABLES * * */
+                        var disqus_shortname = 'grishyru';
+                        
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+{{/post}}
+
+
+ --}}

@@ -1,0 +1,42 @@
+{{#foreach posts}}
+    <article class="post">
+        <div class="featured-image">
+            <a href="{{url}}"><img src="{{image}}"  rel="image_src" alt="{{title}}">
+            </a>
+        </div>
+        <div class="post-content">
+            <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date published_at format="DD MMMM YYYY г."}}</time>
+
+
+            <div class="post-text">
+                {{content words="80"}}
+            </div>
+
+            <div class="post-meta">
+                <a href="{{url}}#disqus_thread">Комментарии</a>
+
+                <div class="md-share">
+                    <div class="socials">
+                        <a target="_blank" href="http://vk.com/share.php?url={{url}}" class="vk">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url}}" class="facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a target="_blank" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" class="twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/share?url={{url}}" class="google">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                        <a target="_blank" href="//pinterest.com/pin/create/button/?url={{url}}&amp;description={{encode title}};media={{image}}" class="pinterest">
+                            <i class="fa fa-pinterest"></i>
+                        </a>
+                    </div>
+                    <a href="#" class="lbl"><i class="fa fa-share-alt"></i>ПОДЕЛИТЬСЯ</a>
+                </div>
+            </div>
+        </div>
+    </article>
+{{/foreach}}
