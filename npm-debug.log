@@ -1,0 +1,167 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'ucss',
+1 verbose cli   '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.40
+4 verbose cache add [ 'ucss', null ]
+5 verbose cache add name=undefined spec="ucss" args=["ucss",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'ucss',
+6 verbose parsed url   path: 'ucss',
+6 verbose parsed url   href: 'ucss' }
+7 silly lockFile 922052ad-ucss ucss
+8 verbose lock ucss /home/jiumx/.npm/922052ad-ucss.lock
+9 silly lockFile 922052ad-ucss ucss
+10 silly lockFile 922052ad-ucss ucss
+11 verbose addNamed [ 'ucss', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 1e76fbf2-ucss ucss@
+14 verbose lock ucss@ /home/jiumx/.npm/1e76fbf2-ucss.lock
+15 silly addNameRange { name: 'ucss', range: '*', hasData: false }
+16 verbose request where is /ucss
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id f67648a862a3e047
+19 verbose url raw /ucss
+20 verbose url resolving [ 'https://registry.npmjs.org/', './ucss' ]
+21 verbose url resolved https://registry.npmjs.org/ucss
+22 verbose request where is https://registry.npmjs.org/ucss
+23 info trying registry request attempt 1 at 15:22:11
+24 http GET https://registry.npmjs.org/ucss
+25 http 200 https://registry.npmjs.org/ucss
+26 silly registry.get cb [ 200,
+26 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"CBVHZBOJW9VF1JSR4H4OYM3VP"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '32329',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     date: 'Sun, 16 Aug 2015 12:22:13 GMT',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'x-served-by': 'cache-fra1240-FRA',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1439727732.161211,VS0,VE908',
+26 silly registry.get     vary: 'Accept' } ]
+27 silly addNameRange number 2 { name: 'ucss', range: '*', hasData: true }
+28 silly addNameRange versions [ 'ucss',
+28 silly addNameRange   [ '0.1.0-beta',
+28 silly addNameRange     '0.1.1-beta',
+28 silly addNameRange     '0.0.1',
+28 silly addNameRange     '0.1.2-beta',
+28 silly addNameRange     '0.2.0-beta',
+28 silly addNameRange     '0.2.1-beta',
+28 silly addNameRange     '0.2.2-beta',
+28 silly addNameRange     '0.3.0-beta',
+28 silly addNameRange     '0.3.1-beta',
+28 silly addNameRange     '0.3.2-beta',
+28 silly addNameRange     '0.4.0-beta',
+28 silly addNameRange     '0.4.1-beta',
+28 silly addNameRange     '0.4.2-beta',
+28 silly addNameRange     '0.4.3-beta',
+28 silly addNameRange     '0.4.4-beta',
+28 silly addNameRange     '0.4.5-beta',
+28 silly addNameRange     '0.4.6-beta' ] ]
+29 verbose addNamed [ 'ucss', '0.4.6-beta' ]
+30 verbose addNamed [ '0.4.6-beta', '0.4.6-beta' ]
+31 silly lockFile 05b8c623-ucss-0-4-6-beta ucss@0.4.6-beta
+32 verbose lock ucss@0.4.6-beta /home/jiumx/.npm/05b8c623-ucss-0-4-6-beta.lock
+33 silly lockFile 4809182e-mjs-org-ucss-ucss-0-4-6-beta-tgz https://registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz
+34 verbose lock https://registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz /home/jiumx/.npm/4809182e-mjs-org-ucss-ucss-0-4-6-beta-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz',
+35 verbose addRemoteTarball   'ac757d31882664694057caab9eea4a455775e933' ]
+36 info retry fetch attempt 1 at 15:22:13
+37 verbose fetch to= /tmp/npm-19375-to0gRY0p/registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz
+38 http GET https://registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz
+39 http 200 https://registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz
+40 silly lockFile 4809182e-mjs-org-ucss-ucss-0-4-6-beta-tgz https://registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz
+41 silly lockFile 4809182e-mjs-org-ucss-ucss-0-4-6-beta-tgz https://registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz
+42 silly lockFile 05b8c623-ucss-0-4-6-beta ucss@0.4.6-beta
+43 silly lockFile 05b8c623-ucss-0-4-6-beta ucss@0.4.6-beta
+44 silly lockFile 1e76fbf2-ucss ucss@
+45 silly lockFile 1e76fbf2-ucss ucss@
+46 silly resolved [ { author:
+46 silly resolved      { name: 'Øyvind Håkestad',
+46 silly resolved        email: 'oyvindeh@opera.com',
+46 silly resolved        url: 'https://github.com/oyvindeh' },
+46 silly resolved     contributors: [ [Object], [Object], [Object] ],
+46 silly resolved     name: 'ucss',
+46 silly resolved     description: 'Find unused CSS rules',
+46 silly resolved     version: '0.4.6-beta',
+46 silly resolved     homepage: 'https://github.com/operasoftware/ucss',
+46 silly resolved     repository: { type: 'git', url: 'git@github.com:operasoftware/ucss' },
+46 silly resolved     main: './lib/ucss.js',
+46 silly resolved     bin: { ucss: 'bin/ucss.bin.js' },
+46 silly resolved     keywords: [ 'css', 'unused' ],
+46 silly resolved     dependencies:
+46 silly resolved      { optimist: '0.3.x',
+46 silly resolved        async: '0.2.x',
+46 silly resolved        cssom: '0.2.x',
+46 silly resolved        cheerio: '0.10.x',
+46 silly resolved        request: '2.10.x',
+46 silly resolved        q: '1.0.x' },
+46 silly resolved     devDependencies: { buster: '0.6.x', sinon: '1.6.x' },
+46 silly resolved     license: 'BSD',
+46 silly resolved     engines: { node: '>=0.6' },
+46 silly resolved     bugs: { url: 'https://github.com/operasoftware/ucss/issues' },
+46 silly resolved     _id: 'ucss@0.4.6-beta',
+46 silly resolved     dist:
+46 silly resolved      { shasum: 'ac757d31882664694057caab9eea4a455775e933',
+46 silly resolved        tarball: 'http://registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz' },
+46 silly resolved     _from: 'ucss@',
+46 silly resolved     _npmVersion: '1.3.14',
+46 silly resolved     _npmUser: { name: 'oyvindeh', email: 'oyvindhakestad@gmail.com' },
+46 silly resolved     maintainers: [ [Object] ],
+46 silly resolved     directories: {},
+46 silly resolved     _shasum: 'ac757d31882664694057caab9eea4a455775e933',
+46 silly resolved     _resolved: 'https://registry.npmjs.org/ucss/-/ucss-0.4.6-beta.tgz' } ]
+47 info install ucss@0.4.6-beta into /usr/local/lib
+48 info installOne ucss@0.4.6-beta
+49 verbose lib/node_modules/ucss unbuild
+50 verbose tar unpack /home/jiumx/.npm/ucss/0.4.6-beta/package.tgz
+51 silly lockFile f3ee2497--usr-local-lib-node-modules-ucss tar:///usr/local/lib/node_modules/ucss
+52 verbose lock tar:///usr/local/lib/node_modules/ucss /home/jiumx/.npm/f3ee2497--usr-local-lib-node-modules-ucss.lock
+53 silly lockFile c8bb8908--npm-ucss-0-4-6-beta-package-tgz tar:///home/jiumx/.npm/ucss/0.4.6-beta/package.tgz
+54 verbose lock tar:///home/jiumx/.npm/ucss/0.4.6-beta/package.tgz /home/jiumx/.npm/c8bb8908--npm-ucss-0-4-6-beta-package-tgz.lock
+55 silly gunzTarPerm modes [ '775', '664' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/ucss'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/ucss']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/ucss',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/ucss',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:108:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Linux 3.16.0-45-generic
+59 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "ucss" "-g"
+60 error cwd /home/jiumx/src/ghost
+61 error node -v v0.10.40
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/ucss
+64 error fstream_path /usr/local/lib/node_modules/ucss
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/ucss'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:108:15)
+71 verbose exit [ 3, true ]

@@ -3,10 +3,12 @@
 
 {{#post}}
  <article class="post">
+    {{#if image}}
     <div class="featured-image">
         <a href="{{url}}"><img src="{{image}}"  rel="image_src" alt="{{title}}">
         </a>
     </div>
+    {{/if}}
     <div class="post-content">
         <div class="post-categories"><a href="
             {{#foreach tags}}
@@ -24,11 +26,12 @@
         <div class="post-text">
              {{content}}
         </div>
-
+        
+        {{#if tags}}
         <div class="post-tags">
             <i class="fa fa-tags"></i>{{tags prefix="Теги: "}}
         </div>
-
+        {{/if}}
         <div class="post-meta">
             <div class="md-share">
                 <div class="socials">
