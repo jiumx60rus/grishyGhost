@@ -1,0 +1,192 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Релиз Cordova 5.2.0</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" href="../assets/favicon.png?v=dd0a9e6636">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css?v=dd0a9e6636">
+    <link rel="stylesheet" type="text/css" href="../assets/css/generate.css?v=dd0a9e6636">
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css?v=dd0a9e6636">
+    <link rel="stylesheet" type="text/css" href="../assets/css/hl.css?v=dd0a9e6636">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css?v=dd0a9e6636">
+    
+    <link href="http://fonts.googleapis.com/css?family=Lato%7COpen+Sans:400,600%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+    
+    <link rel="alternate" type="application/rss+xml" title="Grishy.ru" href="../rss/index.html">
+
+</head>
+
+<body>
+    <header id="header" class="light normal">
+        <div class="container">
+            <h2 class="logo">
+            <a href="../" title="Grishy.ru">Grishy.ru</a>
+        </h2>
+            <p>Блог о программировании</p>
+            <div class="primary-menu">
+                <div class="logo-fixed">
+                    <a href="../" title="Grishy.ru">Grishy.ru </a>
+                </div>
+                <ul id="primary-menu" class="menu">
+                        <li role="presentation">
+    	<a href="../">Главная</a>
+    </li>
+    <li role="presentation">
+    	<a href="../projects/">Проекты</a>
+    </li>
+    <li role="presentation">
+    	<a href="../about/">О сайте</a>
+    </li>
+    <li role="presentation">
+    	<a href="../styleguide/">Styleguide</a>
+    </li>
+
+                </ul>
+            </div>
+            
+            <div class="social-profiles">
+    <a href="http://vk.com/unbiby" target="_blank"><i class="fa fa-vk"></i></a>
+    <a href="http://www.youtube.com/channel/UCs-BYKmVPdBPCXOC0LFZfCg" target="_blank"><i class="fa fa-youtube"></i></a>
+    <a href="https://twitter.com/unbiby" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="mailto:mail@grishy.ru" target="_blank"><i class="fa fa-envelope-o"></i></a>
+    <a href="../rss/index.rss" target="_blank"><i class="fa fa-rss"></i></a>
+</div>            
+
+            <a href="index.html#" class="menu-mobile-open"><i class="fa fa-bars"></i></a>
+        </div>
+    </header>
+
+    <div id="menu-mobile" style="display: none;">
+        <div class="inner">
+            <a href="index.html#" class="menu-mobile-close"><i class="fa fa-close"></i></a>
+            <ul id="mobile-menu" class="menu">
+                    <li role="presentation">
+    	<a href="../">Главная</a>
+    </li>
+    <li role="presentation">
+    	<a href="../projects/">Проекты</a>
+    </li>
+    <li role="presentation">
+    	<a href="../about/">О сайте</a>
+    </li>
+    <li role="presentation">
+    	<a href="../styleguide/">Styleguide</a>
+    </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    
+
+ <article class="post">
+    <div class="featured-image">
+            <a href="index.html"><img src="../content/images/2015/08/641.jpg" rel="image_src" alt="Релиз Cordova 5.2.0"></a>
+    </div>
+    <div class="post-content">
+        <div class="post-categories"><a href="../tag/obzor/" rel="category tag">Обзор</a>
+        </div>
+        <h2 class="post-title"><a href="index.html">Релиз Cordova 5.2.0</a></h2>
+        <time class="post-date" datetime="2015-08-16"><i class="fa fa-clock-o"></i>16 Августа 2015 г.</time>
+
+
+        <div class="post-text">
+            <p>Сегодня вышел новый релиз <strong>Apache Cordova</strong> — 5.2.0.</p>
+
+<pre><code class="language-js">window.onload = function() {  
+    var linkWithAlert = document.getElementById("alertLink");
+    linkWithAlert.onclick = function() {
+        return confirm('Вы уверены?'); 
+    };
+};
+</code></pre>
+
+<p>Основные изменения в данном релизе это:</p>
+
+<ul>
+<li>Поддержка флага <code>--browserify</code></li>
+<li>Поддержка Windows в plugman</li>
+<li>Новая команда <code>clean</code></li>
+<li>Использование ~ вместо ^ по умолчанию в config.xml при использовании <code>--save</code></li>
+</ul>
+
+<p>Также намного больший упор делается на использование NPM вместо собственного реестра плагинов.Также будет немного о предстоящих релизах и вопросы по документации.</p>
+
+<p>Думаю стоит начать с <code>npm -g install cordova</code></p>
+
+<p>Поддержка флага <code>--browserify</code></p>
+
+<p>Теперь имеется полная поддержка <code>--browserify</code> и это официально. Все тесты пройдены и гипотетически это работает. Так как этот функционал долго был в основной ветке, скорее всего таки да, это таки работает.
+Для разработчиков это означает что все плагины собираются в один файл, что значит меньше задержек с инициализацией, и приложение будет грузиться чуть быстрее. Также при сборке с помощью <em>browserify</em> кроме плагинов и общего кода для всех платформ, существуют часть функционала <em>cordova.js</em> которая зависит только от одной платформы, что позволяет разработчикам Cordova публиковать исправления которые затрагивают одну платформу быстрее и для получения обновления надо будет просто обновить платформу до более новой версии. Также это позволяет делать патч релизы, для тех кому не готов быстро идти в светлое будущее.</p>
+
+<p><code>cordova run android --browserify</code></p>
+        </div>
+        
+        <div class="post-tags">
+            <i class="fa fa-tags"></i>Теги: <a href="../tag/obzor/">Обзор</a>, <a href="../tag/apache-cordova/">Apache Cordova</a>, <a href="../tag/mobilnaia-razrabotka/">Мобильная разработка</a>
+        </div>
+
+        <div class="post-comments">
+            <button class="button"><i class="fa fa-comments"></i> Показать комментарии</button>
+
+            <div id="disqus_thread"></div>
+
+        </div>
+    </div>
+</article>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="copyright-text">
+                        © <a href="../">Grishy.ru</a> 2015 • All rights reserved.
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <div class="social-profiles">
+    <a href="http://vk.com/unbiby" target="_blank"><i class="fa fa-vk"></i></a>
+    <a href="http://www.youtube.com/channel/UCs-BYKmVPdBPCXOC0LFZfCg" target="_blank"><i class="fa fa-youtube"></i></a>
+    <a href="https://twitter.com/unbiby" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="mailto:mail@grishy.ru" target="_blank"><i class="fa fa-envelope-o"></i></a>
+    <a href="../rss/index.rss" target="_blank"><i class="fa fa-rss"></i></a>
+</div>                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = 'grishyru';
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+
+    <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js?v=dd0a9e6636"></script>
+    <script type="text/javascript" src="../assets/js/main.js?v=dd0a9e6636"></script>
+
+</body>

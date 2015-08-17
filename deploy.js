@@ -36,9 +36,7 @@ var buster = exec('buster generate',
                     console.log('exec error: ' + error);
                 }
 
-                deleteFolderRecursive("static");
-
-                var test = exec('cp -r staticDecor/dist/ static && buster preview',
+                var test = exec('cp -r staticDecor/dist/ staticGit && buster preview',
                     function(error, stdout, stderr) {
                         console.log('stdout: ' + stdout);
                         console.log('stderr: ' + stderr);

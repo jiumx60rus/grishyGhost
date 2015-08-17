@@ -1,0 +1,125 @@
+@media (min-width:992px) {
+    #menu-mobile {
+        display: none!important;
+    }
+}
+
+@media (max-width:991px) {
+    body {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    h5 {
+        font-size: 14px;
+    }
+    h6 {
+        font-size: 12px;
+    }
+    #header .container {
+        line-height: 60px;
+        height: 60px;
+    }
+    #header .logo {
+        font-size: 30px;
+        line-height: 60px;
+        margin: 0;
+        text-align: left;
+    }
+    #header .logo img {
+        display: inline-block;
+        width: auto;
+        max-height: 50px;
+        margin-top: -10px;
+        margin-bottom: 0;
+    }
+    #header .primary-menu,
+    #header .search-box,
+    #header .social-profiles,
+    #header p {
+        display: none!important;
+    }
+    #header .menu-mobile-open {
+        display: inline-block;
+    }
+    #footer .row > div {
+        margin-bottom: 30px;
+    }
+    #footer .row > div:last-of-type {
+        margin-bottom: 0;
+    }
+    #copyright,
+    #copyright .social-profiles {
+        text-align: center;
+    }
+    #copyright .social-profiles a {
+        margin-top: 7px;
+        margin-right: 7px;
+        margin-left: 7px;
+    }
+    #page-content {
+        padding: 15px 0;
+    }
+    .post {
+        margin-bottom: 45px;
+    }
+    .post .post-content {
+        padding: 30px 5%;
+    }
+    .post .post-date,
+    .post .post-text {
+        margin-bottom: 30px;
+    }
+    .post .post-meta a {
+        display: block;
+        margin: 0;
+    }
+    .post .post-author {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-left: 0;
+    }
+    .post .post-author h3 {
+        padding-left: 40px;
+    }
+    .post .post-author img {
+        top: 30px;
+        width: 25px;
+        height: 25px;
+    }
+    .post-comments {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+    .post-comments ul li {
+        position: relative;
+        padding: 30px 0;
+    }
+    .post-comments ul li .comment-author {
+        left: 35px;
+    }
+    .post-comments ul li .comment-author img {
+        top: -3px;
+        left: -35px;
+        width: 25px;
+        height: 25px;
+    }
+    .post-comments ul li .comment-meta {
+        display: none;
+    }
+}
