@@ -47,6 +47,13 @@ module.exports = function(grunt) {
                     dest: 'dist'
                 }]
             }
+        },
+        uncss: {
+            dist: {
+                files: {
+                    'dist/tidy.css': ['dist/**/*.html']
+                }
+            }
         }
     });
 
@@ -70,10 +77,9 @@ module.exports = function(grunt) {
     grunt.registerTask('uncssTask', function() {
         var glob = require("glob").sync("dist/bundle*.css")[0]
 
-        uncss("dist", function(error, output) {
-            grunt.file.write(glob, output);
-        });
+        grunt.file.write(glob, grunt.file.read('dist/tidy.css'));
+        grunt.file.delete('dist/tidy.css');
     });
 
-    grunt.registerTask('default', ['reduce', "highlight", "repl", "uglify", "uncssTask", "cssmin"]);
+    grunt.registerTask('default', ['reduce', "highlight", "repl", "uglify", "uncss", "uncssTask", "cssmin"]);
 };

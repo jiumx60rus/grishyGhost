@@ -7822,6 +7822,10 @@ select {
     font-weight: 700;
 }
 
+.post-comments button {
+    width: 100%;
+}
+
 .post-comments ul {
     margin: 15px 0 0;
     padding: 0;

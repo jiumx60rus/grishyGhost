@@ -1,8 +1,11 @@
 {{#foreach posts}}
     <article class="post">
         <div class="featured-image">
-            <a href="{{url}}"><img src="{{image}}"  rel="image_src" alt="{{title}}">
-            </a>
+            {{#if image}}
+                <a href="{{url}}"><img src="{{image}}"  rel="image_src" alt="{{title}}"></a>
+            {{else}}
+                <a href="{{url}}"><img src="https://unsplash.it/1140/640"  rel="image_src" alt="{{title}}"></a>
+            {{/if}}
         </div>
         <div class="post-content">
             <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>

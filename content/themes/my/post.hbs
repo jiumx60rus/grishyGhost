@@ -3,12 +3,13 @@
 
 {{#post}}
  <article class="post">
-    {{#if image}}
     <div class="featured-image">
-        <a href="{{url}}"><img src="{{image}}"  rel="image_src" alt="{{title}}">
-        </a>
+        {{#if image}}
+            <a href="{{url}}"><img src="{{image}}"  rel="image_src" alt="{{title}}"></a>
+        {{else}}
+            <a href="{{url}}"><img src="https://unsplash.it/1140/641?random"  rel="image_src" alt="{{title}}"></a>
+        {{/if}}
     </div>
-    {{/if}}
     <div class="post-content">
         <div class="post-categories"><a href="
             {{#foreach tags}}
@@ -56,21 +57,10 @@
         </div> --}}
 
         <div class="post-comments">
+            <button class="button"><i class="fa fa-comments"></i> Показать комментарии</button>
 
-                <div id="disqus_thread">
-                    <script type="text/javascript">
-                        /* * * CONFIGURATION VARIABLES * * */
-                        var disqus_shortname = 'grishyru';
-                        
-                        /* * * DON'T EDIT BELOW THIS LINE * * */
-                        (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                        })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-                </div>
+            <div id="disqus_thread"></div>
+
         </div>
     </div>
 </article>
