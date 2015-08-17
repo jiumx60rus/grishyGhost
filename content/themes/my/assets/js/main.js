@@ -11,23 +11,17 @@
                 })
             },
             c = function() {
-                a("[data-type]").each(function() {
-                    a(this).data("offsetY", parseInt(a(this).attr("data-offsetY"))), a(this).data("Xposition", a(this).attr("data-Xposition")), a(this).data("speed", a(this).attr("data-speed"))
-                }), a('[data-type="background"]').each(function() {
-                    {
-                        var b = a(this),
-                            c = b.offset();
-                        c.top
-                    }
-                    a(window).scroll(function() {
-                        var c = -(a(window).scrollTop() / b.data("speed"));
-                        b.data("offsetY") && (c += b.data("offsetY"));
-                        var d = "50% " + c + "px";
-                        b.css({
-                            backgroundPosition: d
-                        })
-                    })
-                })
+                /* * * CONFIGURATION VARIABLES * * */
+                var disqus_shortname = 'grishyru';
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script');
+                    dsq.type = 'text/javascript';
+                    dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
             },
             e = function() {
                 a(".menu-mobile-open").on("click", function() {
