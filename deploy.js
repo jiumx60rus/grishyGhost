@@ -17,8 +17,8 @@ var deleteFolderRecursive = function(path) {
     }
 };
 
-deleteFolderRecursive("/static");
-// deleteFolderRecursive("/staticDecor/dist");
+deleteFolderRecursive("static");
+deleteFolderRecursive("staticDecor/dist");
 
 var buster = exec('buster generate',
     function(error, stdout, stderr) {

@@ -1,8 +1,9 @@
-/*
-This is an example configuration for grunt-reduce
-*/
+var replace = require("replace");
+var uncss = require('uncss');
+var fs = require('fs')
+
+
 module.exports = function(grunt) {
-    'use strict';
 
     grunt.initConfig({
         reduce: {
@@ -27,13 +28,6 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        uncss: {
-            dist: {
-                files: {
-                    'dist/static/css.css': 'dist/**/*.html'
-                }
-            }
-        },
         uglify: {
             scripts: {
                 files: [{
@@ -44,12 +38,42 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'dist', // in folder
+                    src: ['**/*.css'],
+                    dest: 'dist'
+                }]
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-reduce');
     grunt.loadNpmTasks('grunt-highlight');
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    grunt.registerTask('default', ['reduce', "highlight", "uncss", "uglify"]);
+
+    grunt.registerTask('repl', function() {
+        replace({
+            regex: "http://localhost:2368",
+            replacement: "http://grishy.ru",
+            paths: ['dist/rss'],
+            recursive: true,
+            silent: false,
+        });
+    });
+
+    grunt.registerTask('uncssTask', function() {
+        var glob = require("glob").sync("dist/bundle*.css")[0]
+
+        uncss("dist", function(error, output) {
+            grunt.file.write(glob, output);
+        });
+    });
+
+    grunt.registerTask('default', ['reduce', "highlight", "repl", "uglify", "uncssTask", "cssmin"]);
 };
