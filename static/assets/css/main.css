@@ -6933,11 +6933,11 @@ pre {
     font-size: 14px;
     line-height: 20px;
     display: block;
-    margin: 30px;
+    margin: 0;
     padding: 15px;
     white-space: pre-wrap;
     word-wrap: break-word;
-    word-break: break-all;
+    /*word-break: break-all;*/
     border: 1px solid #dde4e9;
     border-radius: 4px;
     background-color: #fcfcfc;
@@ -7364,7 +7364,7 @@ select {
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin-right: 7px;
+    margin-right: 10px;
     color: #fff;
     border-radius: 32px;
     background: rgba(0, 0, 0, .1);

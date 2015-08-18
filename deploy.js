@@ -19,7 +19,7 @@ exec('buster generate', function() {
 
         console.log("Подготовка перед отправкой");
 
-        cp('-R', 'staticDecor/dist/', 'staticGit');
+        cp('-Rf', 'staticDecor/dist/', 'staticGit');
 
         console.log("Скопированно...");
 
