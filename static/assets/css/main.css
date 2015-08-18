@@ -282,7 +282,7 @@ html {
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans';
     font-size: 14px;
     line-height: 1.42857;
     color: #333;
@@ -780,7 +780,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-family: 'Open Sans', monospace;
 }
 
 kbd {
@@ -5912,7 +5912,7 @@ button.close {
 }
 
 .tooltip {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.4;
@@ -6032,7 +6032,7 @@ button.close {
 }
 
 .popover {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.42857;
@@ -6715,8 +6715,8 @@ a:hover {
 
 code,
 pre {
-    font-family: Monaco, Menlo, Consolas, Courier New, monospace;
-    font-size: 12px;
+    font-family: 'Open Sans', monospace;
+    font-size: 14px;
     padding: 0 3px 2px;
     color: #232527;
     border-radius: 3px;
@@ -6825,7 +6825,7 @@ img.img-border {
 }
 
 .wp-caption {
-    font-family: Georgia, Times New Roman, Times, serif;
+    font-family: 'Open Sans', serif;
     font-style: italic;
     max-width: 100%;
     margin: 10px 20px 20px;
@@ -6930,7 +6930,7 @@ code {
 }
 
 pre {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20px;
     display: block;
     margin: 30px;

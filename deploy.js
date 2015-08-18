@@ -2,7 +2,7 @@ require('shelljs/global');
 
 config.silent = true
 
-console.time("Время выполнения ");
+console.time("Время выполнения");
 
 rm('-r', 'static');
 rm('-r', 'staticDecor/dist');
@@ -14,7 +14,9 @@ exec('buster generate', function() {
 
     exec('cd staticDecor && grunt', function() {
         console.log("Оптимизированно");
-        console.timeEnd("Время выполнения ");
+
+        console.timeEnd("Время выполнения");
+
         console.log("Подготовка перед отправкой");
 
         cp('-R', 'staticDecor/dist/', 'staticGit');
@@ -30,7 +32,13 @@ exec('buster generate', function() {
             console.log("Отправка стаческого блога");
 
 
-            exec('cd staticGit && git add . && git commit -m"' + commitMesg + '" && git push');
+            exec('cd staticGit && git add . && git commit -m"' + commitMesg + '" && git push', function(code, output) {
+                if (!code) {
+                    console.log("Всё готово");
+                } else {
+                    console.log('Program output:', output);
+                }
+            });
         })
 
     });
