@@ -29,10 +29,11 @@ exec('buster generate', function() {
             console.log("Отправка стаческого блога");
 
             cd("staticGit")
-            
-            exec('git add . && git commit -m"' + commitMesg + '" && git push', function() {
-                console.timeEnd("Время выполнения ");
-            })
+
+            exec('ls', function(code, output) {
+                console.log('Exit code:', code);
+                console.log('Program output:', output);
+            });
         })
 
     });
