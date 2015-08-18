@@ -13,15 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="shortcut icon" href="{{asset "favicon.png"}}">
-
-    {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/generate.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/responsive.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/hl.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.css"}}" />
     
-    <link href='//fonts.googleapis.com/css?family=Lato|Open+Sans:400,600|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    {{!-- <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> --}}
     
     <link rel="alternate" type="application/rss+xml" title="{{@blog.title}}" href="{{@blog.url}}/rss/">
 
@@ -109,8 +102,17 @@
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
+    
 
-    {{! The main JavaScript file for Casper }}
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/generate.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/responsive.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/hl.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.css"}}" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
     <script type="text/javascript" src="{{asset "js/jquery-2.1.4.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
 

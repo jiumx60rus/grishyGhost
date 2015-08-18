@@ -1,24 +1,26 @@
 {{#foreach posts}}
-    <article class="post">
-        <div class="featured-image">
-            {{#if image}}
-                <a href="{{url}}"><img src="{{image}}"  rel="image_src" alt="{{title}}"></a>
-            {{else}}
-                <a href="{{url}}"><img src="https://unsplash.it/1140/640"  rel="image_src" alt="{{title}}"></a>
-            {{/if}}
-        </div>
-        <div class="post-content">
-            <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
-            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date published_at format="DD MMMM YYYY г."}}</time>
+	<article class="post">
+		<div class="featured-image">
+			{{#if image}}
+				<a href="{{url}}"><img src="{{image}}"  rel="image_src" alt="{{title}}"></a>
+			{{else}}
+				<a href="{{url}}"><img src="https://unsplash.it/1140/640"  rel="image_src" alt="{{title}}"></a>
+			{{/if}}
+		</div>
+		<div class="post-content">
+			<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+			<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date published_at format="DD MMMM YYYY г."}}</time>
 
 
-            <div class="post-text">
-                {{{content words="80"}}}
-            </div>
+			<div class="post-text">
+				{{{content words="80"}}}
+			</div>
 
-{{!--             <div class="post-meta">
-                <a href="{{url}}#disqus_thread">Комментарии</a>
-            </div> --}}
-        </div>
-    </article>
+			{{!--
+				<div class="post-meta">
+					<a href="{{url}}#disqus_thread">Комментарии</a>
+				</div> 
+			--}}
+		</div>
+	</article>
 {{/foreach}}

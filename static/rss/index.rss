@@ -1,108 +1,61 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Grishy.ru</title><description>Блог о программировании</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Mon, 17 Aug 2015 19:23:29 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Релиз Cordova 5.2.0</title><description>&lt;p&gt;Сегодня вышел новый релиз &lt;strong&gt;Apache Cordova&lt;/strong&gt; — 5.2.0.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-js"&gt;window.onload = function() {  
-    var linkWithAlert = document.getElementById("alertLink");
-    linkWithAlert.onclick = function() {
-        return confirm('Вы уверены?'); 
-    };
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Основные изменения в данном релизе это:&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Grishy.ru</title><description>Блог о программировании</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Tue, 18 Aug 2015 12:10:42 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Почему Ghost</title><description>&lt;p&gt;Всем привет! Решил завести свой блог, но не просто на &lt;a href="https://wordpress.org/"&gt;Wordpress&lt;/a&gt; или подобный &lt;a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D1%8B%D0%BC"&gt;CMS&lt;/a&gt;, а на &lt;a href="https://ghost.org/"&gt;Ghost&lt;/a&gt;. Выбирал я движок для статического блога и многие части Wordress и таких же больших систем мне были просто не нужны, хотя можно было взять что угодно :) . Вот почему я выбрал именно его.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Поддержка флага &lt;code&gt;--browserify&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Поддержка Windows в plugman&lt;/li&gt;
-&lt;li&gt;Новая команда &lt;code&gt;clean&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Использование ~ вместо ^ по умолчанию в config.xml при использовании&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/rieliz-cordova-5-2-0/</link><guid isPermaLink="false">5dffd4d5-ef3e-4dc4-8523-510081e77e61</guid><category>Обзор</category><category>Apache Cordova</category><category>Мобильная разработка</category><dc:creator>Sergey</dc:creator><pubDate>Sat, 15 Aug 2015 22:58:11 GMT</pubDate><media:content url="http://localhost:2368/content/images/2015/08/641.jpg" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2015/08/641.jpg" alt="Релиз Cordova 5.2.0"&gt;&lt;p&gt;Сегодня вышел новый релиз &lt;strong&gt;Apache Cordova&lt;/strong&gt; — 5.2.0.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-js"&gt;window.onload = function() {  
-    var linkWithAlert = document.getElementById("alertLink");
-    linkWithAlert.onclick = function() {
-        return confirm('Вы уверены?'); 
-    };
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Основные изменения в данном релизе это:&lt;/p&gt;
+&lt;li&gt;Написан&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/pochiemu-ghost/</link><guid isPermaLink="false">f882159e-d645-4ab2-a7ce-0c44186264a3</guid><category>Node.js</category><category>Grunt</category><category>Web</category><category>Js</category><category>Html</category><category>Css</category><category>Оптимизация</category><category>Ghost</category><dc:creator>Sergey</dc:creator><pubDate>Mon, 17 Aug 2015 19:50:47 GMT</pubDate><media:content url="http://localhost:2368/content/images/2015/08/porsche.jpeg" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2015/08/porsche.jpeg" alt="Почему Ghost"&gt;&lt;p&gt;Всем привет! Решил завести свой блог, но не просто на &lt;a href="https://wordpress.org/"&gt;Wordpress&lt;/a&gt; или подобный &lt;a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D1%8B%D0%BC"&gt;CMS&lt;/a&gt;, а на &lt;a href="https://ghost.org/"&gt;Ghost&lt;/a&gt;. Выбирал я движок для статического блога и многие части Wordress и таких же больших систем мне были просто не нужны, хотя можно было взять что угодно :) . Вот почему я выбрал именно его.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Поддержка флага &lt;code&gt;--browserify&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Поддержка Windows в plugman&lt;/li&gt;
-&lt;li&gt;Новая команда &lt;code&gt;clean&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Использование ~ вместо ^ по умолчанию в config.xml при использовании &lt;code&gt;--save&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Написан на Javascript (&lt;a href="https://nodejs.org/"&gt;Node.js&lt;/a&gt;) , а я его неплохо знаю и могу что-то сам доделать (так и случилось)&lt;/li&gt;
+&lt;li&gt;Нормальное написание тем (Используется &lt;a href="http://handlebarsjs.com/"&gt;Handlebars&lt;/a&gt;) , а не код вперемешку со стилями как в Wordpress. &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Также намного больший упор делается на использование NPM вместо собственного реестра плагинов.Также будет немного о предстоящих релизах и вопросы по документации.&lt;/p&gt;
+&lt;p&gt;Пример темы Wordpress: &lt;/p&gt;
 
-&lt;p&gt;Думаю стоит начать с &lt;code&gt;npm -g install cordova&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-php"&gt;if ( get_theme_mod( 'logo_upload') ) {  
+    $logo = "&amp;lt;span class='screen-reader-text'&amp;gt;" . get_bloginfo('name') . "&amp;lt;/span&amp;gt;&amp;lt;img class='logo' src='".esc_url(get_theme_mod( 'logo_upload'))."' alt='".esc_attr( get_bloginfo( 'name' ) )."' /&amp;gt;";
+} else {
+    $logo = get_bloginfo('name');
+}
 
-&lt;p&gt;Поддержка флага &lt;code&gt;--browserify&lt;/code&gt;&lt;/p&gt;
+$output = "&amp;lt;h1 id='site-title' class='site-title'&amp;gt;";
+$output .= "&amp;lt;a href='".esc_url( home_url() )."' title='".esc_attr( get_bloginfo( 'name' ) )."'&amp;gt;";
+$output .= $logo;
+$output .= "&amp;lt;/a&amp;gt;";
+$output .= "&amp;lt;/h1&amp;gt;";
 
-&lt;p&gt;Теперь имеется полная поддержка &lt;code&gt;--browserify&lt;/code&gt; и это официально. Все тесты пройдены и гипотетически это работает. Так как этот функционал долго был в основной ветке, скорее всего таки да, это таки работает.
-Для разработчиков это означает что все плагины собираются в один файл, что значит меньше задержек с инициализацией, и приложение будет грузиться чуть быстрее. Также при сборке с помощью &lt;em&gt;browserify&lt;/em&gt; кроме плагинов и общего кода для всех платформ, существуют часть функционала &lt;em&gt;cordova.js&lt;/em&gt; которая зависит только от одной платформы, что позволяет разработчикам Cordova публиковать исправления которые затрагивают одну платформу быстрее и для получения обновления надо будет просто обновить платформу до более новой версии. Также это позволяет делать патч релизы, для тех кому не готов быстро идти в светлое будущее.&lt;/p&gt;
+echo $output;  
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;code&gt;cordova run android --browserify&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>http://localhost:2368/welcome-to-ghost/</link><guid isPermaLink="false">4c236c6d-6a7a-4568-b195-0deedb429478</guid><category>Getting Started</category><dc:creator>Sergey</dc:creator><pubDate>Fri, 14 Aug 2015 17:43:41 GMT</pubDate><media:content url="http://localhost:2368/content/images/2015/08/641-1.jpg" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2015/08/641-1.jpg" alt="Welcome to Ghost"&gt;&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
+&lt;p&gt;И пример моей темы:&lt;/p&gt;
 
-&lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-handlebars"&gt;{{!&amp;lt; default}}
 
-&lt;p&gt;Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!&lt;/p&gt;
+&amp;lt;h2 class="title"&amp;gt;  
+    Записи по тегу: &amp;lt;span&amp;gt;{{tag.name}} &amp;lt;/span&amp;gt;
+&amp;lt;/h2&amp;gt;
 
-&lt;p&gt;Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use &lt;em&gt;shortcuts&lt;/em&gt; to &lt;strong&gt;style&lt;/strong&gt; your content. For example, a list:&lt;/p&gt;
+{{&amp;gt; "loop"}}
+{{pagination}}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Item number one&lt;/li&gt;
-&lt;li&gt;Item number two
-&lt;ul&gt;&lt;li&gt;A nested item&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;A final item&lt;/li&gt;
+&lt;li&gt;Не нужно много попутного к нему. Всё что нужно ему для работы он сам скачает, нужно только написать &lt;code&gt;npm install --production&lt;/code&gt;, а Node.js у меня и так установлен.&lt;/li&gt;
+&lt;li&gt;Удобная и минималистичная панель управления.
+&lt;img src="http://localhost:2368/content/images/2015/08/screencapture-host-editor.png" alt="Почему Ghost"&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;or with numbers!&lt;/p&gt;
+&lt;h4 id=""&gt;Минусы&lt;/h4&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Remember to buy some milk  &lt;/li&gt;
-&lt;li&gt;Drink the milk  &lt;/li&gt;
-&lt;li&gt;Tweet that I remembered to buy the milk, and drank it&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Из коробки не поддерживает генерацию в статические файлы (Набор файлов, чтобы загрузить на любой бесплатный хостинг)&lt;/li&gt;
+&lt;li&gt;Нет автоматического изменения размера изображения и их оптимизации&lt;/li&gt;
+&lt;li&gt;Нет менеджера изображений (просто идет разделение по дате &lt;code&gt;/content/images/2015/08/porsche.jpeg&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Код написан хорошо, но написан для использования в их платформе и сделать шаг вправо, шаг влево уже не так просто, но можно :)&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id="links"&gt;Links&lt;/h3&gt;
+&lt;h3 id=""&gt;Вывод&lt;/h3&gt;
 
-&lt;p&gt;Want to link to a source? No problem. If you paste in a URL, like &lt;a href="http://ghost.org"&gt;http://ghost.org&lt;/a&gt; - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to &lt;a href="http://ghost.org"&gt;the Ghost website&lt;/a&gt;. Neat.&lt;/p&gt;
+&lt;p&gt;Ghost идеально подойдёт человеку(или людям, т.к. тут есть разделение на пользователей), который чуть-чуть знаком с IT, знает что такое хостинг и консоль и хочет вести свой блог (Возможно даже не маленький, но простой).&lt;/p&gt;
 
-&lt;h3 id="whataboutimages"&gt;What about Images?&lt;/h3&gt;
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2015/08/ghost.jpg" alt="Почему Ghost"&gt;&lt;/p&gt;
 
-&lt;p&gt;Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://ghost.org/images/ghost.png" alt="Welcome to Ghost"&gt;&lt;/p&gt;
-
-&lt;p&gt;Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:&lt;/p&gt;
-
-&lt;h3 id="quoting"&gt;Quoting&lt;/h3&gt;
-
-&lt;p&gt;Sometimes a link isn't enough, you want to quote someone on what they've said. Perhaps you've started using a new blogging platform and feel the sudden urge to share their slogan? A quote might be just the way to do it!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Ghost - Just a blogging platform&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="workingwithcode"&gt;Working with Code&lt;/h3&gt;
-
-&lt;p&gt;Got a streak of geek? We've got you covered there, too. You can write inline &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there. &lt;br&gt;
-    .awesome-thing {
-        display: block;
-        width: 100%;
-    }&lt;/p&gt;
-
-&lt;h3 id="readyforabreak"&gt;Ready for a Break?&lt;/h3&gt;
-
-&lt;p&gt;Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id="advancedusage"&gt;Advanced Usage&lt;/h3&gt;
-
-&lt;p&gt;There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.&lt;/p&gt;
-
-&lt;p&gt;&lt;input type="text" placeholder="I'm an input field!"&gt;&lt;/p&gt;
-
-&lt;p&gt;That should be enough to get you started. Have fun - and let us know what you think :)&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;В следующий постах напишу, как сделать из любой CMS статический сайт и оптимизировать его по максимум.&lt;/p&gt;</content:encoded></item></channel></rss>

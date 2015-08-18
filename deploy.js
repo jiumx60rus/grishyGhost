@@ -18,6 +18,7 @@ var deleteFolderRecursive = function(path) {
 };
 
 deleteFolderRecursive("static");
+// deleteFolderRecursive("staticGit");
 deleteFolderRecursive("staticDecor/dist");
 
 var buster = exec('buster generate',
@@ -36,7 +37,9 @@ var buster = exec('buster generate',
                     console.log('exec error: ' + error);
                 }
 
-                var test = exec('cp -r staticDecor/dist/ staticGit && buster preview',
+                var commitText = "Blog update: " + new Date();
+
+                var push = exec('cp -r staticDecor/dist/ staticGit && cd staticGit && git add -A && git commit -m "' + commitText + '" && git push',
                     function(error, stdout, stderr) {
                         console.log('stdout: ' + stdout);
                         console.log('stderr: ' + stderr);
@@ -49,4 +52,3 @@ var buster = exec('buster generate',
 
 
     });
-

@@ -54,6 +54,18 @@ module.exports = function(grunt) {
                     'dist/tidy.css': ['dist/**/*.html']
                 }
             }
+        },
+        inlinecss: {
+            main: {
+                options: {
+                    // extraCss: require("glob").sync("dist/bundle*.css")[0],
+                    preserveMediaQueries: true,
+                    preserveImportant: true
+                },
+                files: {
+                    'dist': 'dist/**/*.html'
+                }
+            }
         }
     });
 
@@ -62,6 +74,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-inline-css');
 
 
     grunt.registerTask('repl', function() {
@@ -83,5 +96,5 @@ module.exports = function(grunt) {
         grunt.file.write("dist/CNAME", "grishy.ru");
     });
 
-    grunt.registerTask('default', ['reduce', "highlight", "repl", "uglify", "uncss", "uncssTask", "cssmin"]);
+    grunt.registerTask('default', ['reduce', "highlight", "repl", "uglify", "uncss", "uncssTask", /*"inlinecss", */"cssmin"]);
 };

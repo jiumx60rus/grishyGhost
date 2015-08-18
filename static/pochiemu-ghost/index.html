@@ -1,0 +1,223 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Почему Ghost</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" href="../assets/favicon.png?v=7ffe1b8776">
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="Grishy.ru" href="../rss/index.html">
+
+</head>
+
+<body>
+    <header id="header" class="light normal">
+        <div class="container">
+            <h2 class="logo">
+            <a href="../" title="Grishy.ru">Grishy.ru</a>
+        </h2>
+            <p>Блог о программировании</p>
+            <div class="primary-menu">
+                <div class="logo-fixed">
+                    <a href="../" title="Grishy.ru">Grishy.ru </a>
+                </div>
+                <ul id="primary-menu" class="menu">
+                        <li role="presentation">
+    	<a href="../">Главная</a>
+    </li>
+    <li role="presentation">
+    	<a href="../projects/">Проекты</a>
+    </li>
+    <li role="presentation">
+    	<a href="../about/">О сайте</a>
+    </li>
+    <li role="presentation">
+    	<a href="../styleguide/">Styleguide</a>
+    </li>
+
+                </ul>
+            </div>
+            
+            <div class="social-profiles">
+    <a href="http://vk.com/unbiby" target="_blank"><i class="fa fa-vk"></i></a>
+    <a href="http://www.youtube.com/channel/UCs-BYKmVPdBPCXOC0LFZfCg" target="_blank"><i class="fa fa-youtube"></i></a>
+    <a href="https://twitter.com/unbiby" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="mailto:mail@grishy.ru" target="_blank"><i class="fa fa-envelope-o"></i></a>
+    <a href="../rss/index.rss" target="_blank"><i class="fa fa-rss"></i></a>
+</div>            
+
+            <a href="index.html#" class="menu-mobile-open"><i class="fa fa-bars"></i></a>
+        </div>
+    </header>
+
+    <div id="menu-mobile" style="display: none;">
+        <div class="inner">
+            <a href="index.html#" class="menu-mobile-close"><i class="fa fa-close"></i></a>
+            <ul id="mobile-menu" class="menu">
+                    <li role="presentation">
+    	<a href="../">Главная</a>
+    </li>
+    <li role="presentation">
+    	<a href="../projects/">Проекты</a>
+    </li>
+    <li role="presentation">
+    	<a href="../about/">О сайте</a>
+    </li>
+    <li role="presentation">
+    	<a href="../styleguide/">Styleguide</a>
+    </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    
+
+ <article class="post">
+    <div class="featured-image">
+            <a href="index.html"><img src="../content/images/2015/08/porsche.jpeg" rel="image_src" alt="Почему Ghost"></a>
+    </div>
+    <div class="post-content">
+        <div class="post-categories"><a href="../tag/node-js/" rel="category tag">Node.js</a>
+        </div>
+        <h2 class="post-title"><a href="index.html">Почему Ghost</a></h2>
+        <time class="post-date" datetime="2015-08-17"><i class="fa fa-clock-o"></i>17 Августа 2015 г.</time>
+
+
+        <div class="post-text">
+            <p>Всем привет! Решил завести свой блог, но не просто на <a href="https://wordpress.org/">Wordpress</a> или подобный <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D1%8B%D0%BC">CMS</a>, а на <a href="https://ghost.org/">Ghost</a>. Выбирал я движок для статического блога и многие части Wordress и таких же больших систем мне были просто не нужны, хотя можно было взять что угодно :) . Вот почему я выбрал именно его.</p>
+
+<ul>
+<li>Написан на Javascript (<a href="https://nodejs.org/">Node.js</a>) , а я его неплохо знаю и могу что-то сам доделать (так и случилось)</li>
+<li>Нормальное написание тем (Используется <a href="http://handlebarsjs.com/">Handlebars</a>) , а не код вперемешку со стилями как в Wordpress. </li>
+</ul>
+
+<p>Пример темы Wordpress: </p>
+
+<pre><code class="language-php">if ( get_theme_mod( 'logo_upload') ) {  
+    $logo = "&lt;span class='screen-reader-text'&gt;" . get_bloginfo('name') . "&lt;/span&gt;&lt;img class='logo' src='".esc_url(get_theme_mod( 'logo_upload'))."' alt='".esc_attr( get_bloginfo( 'name' ) )."' /&gt;";
+} else {
+    $logo = get_bloginfo('name');
+}
+
+$output = "&lt;h1 id='site-title' class='site-title'&gt;";
+$output .= "&lt;a href='".esc_url( home_url() )."' title='".esc_attr( get_bloginfo( 'name' ) )."'&gt;";
+$output .= $logo;
+$output .= "&lt;/a&gt;";
+$output .= "&lt;/h1&gt;";
+
+echo $output;  
+</code></pre>
+
+<p>И пример моей темы:</p>
+
+<pre><code class="language-handlebars">{{!&lt; default}}
+
+&lt;h2 class="title"&gt;  
+    Записи по тегу: &lt;span&gt;{{tag.name}} &lt;/span&gt;
+&lt;/h2&gt;
+
+{{&gt; "loop"}}
+{{pagination}}
+</code></pre>
+
+<ul>
+<li>Не нужно много попутного к нему. Всё что нужно ему для работы он сам скачает, нужно только написать <code>npm install --production</code>, а Node.js у меня и так установлен.</li>
+<li>Удобная и минималистичная панель управления.
+<img src="../content/images/2015/08/screencapture-host-editor.png" alt="Панель управления ghost"></li>
+</ul>
+
+<h4 id="">Минусы</h4>
+
+<ul>
+<li>Из коробки не поддерживает генерацию в статические файлы (Набор файлов, чтобы загрузить на любой бесплатный хостинг)</li>
+<li>Нет автоматического изменения размера изображения и их оптимизации</li>
+<li>Нет менеджера изображений (просто идет разделение по дате <code>/content/images/2015/08/porsche.jpeg</code>)</li>
+<li>Код написан хорошо, но написан для использования в их платформе и сделать шаг вправо, шаг влево уже не так просто, но можно :)</li>
+</ul>
+
+<h3 id="">Вывод</h3>
+
+<p>Ghost идеально подойдёт человеку(или людям, т.к. тут есть разделение на пользователей), который чуть-чуть знаком с IT, знает что такое хостинг и консоль и хочет вести свой блог (Возможно даже не маленький, но простой).</p>
+
+<p><img src="../content/images/2015/08/ghost.jpg" alt="ghost"></p>
+
+<p>В следующий постах напишу, как сделать из любой CMS статический сайт и оптимизировать его по максимум.</p>
+        </div>
+        
+        <div class="post-tags">
+            <i class="fa fa-tags"></i>Теги: <a href="../tag/node-js/">Node.js</a>, <a href="../tag/grunt/">Grunt</a>, <a href="../tag/web/">Web</a>, <a href="../tag/js/">Js</a>, <a href="../tag/html/">Html</a>, <a href="../tag/css/">Css</a>, <a href="../tag/optimizatsiia/">Оптимизация</a>, <a href="../tag/ghost-tag/">Ghost</a>
+        </div>
+
+        <div class="post-comments">
+            <button class="button"><i class="fa fa-comments"></i> Показать комментарии</button>
+
+            <div id="disqus_thread"></div>
+
+        </div>
+    </div>
+</article>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="copyright-text">
+                        © <a href="../">Grishy.ru</a> 2015 • All rights reserved.
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <div class="social-profiles">
+    <a href="http://vk.com/unbiby" target="_blank"><i class="fa fa-vk"></i></a>
+    <a href="http://www.youtube.com/channel/UCs-BYKmVPdBPCXOC0LFZfCg" target="_blank"><i class="fa fa-youtube"></i></a>
+    <a href="https://twitter.com/unbiby" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="mailto:mail@grishy.ru" target="_blank"><i class="fa fa-envelope-o"></i></a>
+    <a href="../rss/index.rss" target="_blank"><i class="fa fa-rss"></i></a>
+</div>                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = 'grishyru';
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css?v=7ffe1b8776">
+    <link rel="stylesheet" type="text/css" href="../assets/css/generate.css?v=7ffe1b8776">
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css?v=7ffe1b8776">
+    <link rel="stylesheet" type="text/css" href="../assets/css/hl.css?v=7ffe1b8776">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css?v=7ffe1b8776">
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js?v=7ffe1b8776"></script>
+    <script type="text/javascript" src="../assets/js/main.js?v=7ffe1b8776"></script>
+
+</body>
