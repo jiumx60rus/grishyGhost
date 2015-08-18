@@ -20,60 +20,18 @@ exec('buster generate', function() {
 
         console.log("Скопированно...");
 
-        var commitMesg = "Обновление блога:" + new Date();
 
         // Работа с git
-        exec('git add .', function() {
-            exec('git commit -m"' + commitMesg + '"', function() {
-                exec('git push', function() {
-                	
-                })
+        var commitMesg = "Обновление блога:" + new Date();
+
+        exec('git add . && git commit -m"' + commitMesg + '" && git push', function() {
+            console.log("Отправка основного репозитория закончена");
+            console.log("Отправка стаческого блога");
+
+            exec('cd staticGit && git add . && git commit -m"' + commitMesg + '" && git push', function() {
+                console.timeEnd("Время выполнения ");
             })
         })
 
-        console.timeEnd("Время выполнения ");
-
     });
 });
-
-
-// var buster = exec('buster generate',
-//     function(error, stdout, stderr) {
-//         console.log('stdout: ' + stdout);
-//         console.log('stderr: ' + stderr);
-//         if (error !== null) {
-//             console.log('exec error: ' + error);
-//         }
-
-//         var grunt = exec('cd staticDecor && grunt',
-//             function(error, stdout, stderr) {
-//                 console.log('stdout: ' + stdout);
-//                 console.log('stderr: ' + stderr);
-//                 if (error !== null) {
-//                     console.log('exec error: ' + error);
-//                 }
-
-//                 var commitText = "Blog update: " + new Date();
-
-//                 var push = exec('cp -r staticDecor/dist/ staticGit && cd staticGit && git add -A :/ && git commit -m "' + commitText + '" && git push',
-//                     function(error, stdout, stderr) {
-//                         console.log('stdout: ' + stdout);
-//                         console.log('stderr: ' + stderr);
-//                         if (error !== null) {
-//                             console.log('exec error: ' + error);
-//                         }
-
-//                         var push = exec('git add -A :/ && git commit -m "' + commitText + '" && git push',
-//                             function(error, stdout, stderr) {
-//                                 console.log('stdout: ' + stdout);
-//                                 console.log('stderr: ' + stderr);
-//                                 if (error !== null) {
-//                                     console.log('exec error: ' + error);
-//                                 }
-
-//                             });
-//                     });
-//             });
-
-
-//     });
