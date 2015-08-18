@@ -30,7 +30,7 @@ exec('buster generate', function() {
 
             cd("staticGit")
 
-            exec('ls', function(code, output) {
+            exec('git add . && git commit -m"' + commitMesg + '" && git push', function(code, output) {
                 console.log('Exit code:', code);
                 console.log('Program output:', output);
             });
