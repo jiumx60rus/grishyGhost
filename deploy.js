@@ -28,7 +28,9 @@ exec('buster generate', function() {
             console.log("Отправка основного репозитория закончена");
             console.log("Отправка стаческого блога");
 
-            exec('cd staticGit && git add . && git commit -m"' + commitMesg + '" && git push', function() {
+            cd("staticGit")
+            
+            exec('git add . && git commit -m"' + commitMesg + '" && git push', function() {
                 console.timeEnd("Время выполнения ");
             })
         })
