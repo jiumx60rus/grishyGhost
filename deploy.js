@@ -14,6 +14,7 @@ exec('buster generate', function() {
 
     exec('cd staticDecor && grunt', function() {
         console.log("Оптимизированно");
+        console.timeEnd("Время выполнения ");
         console.log("Подготовка перед отправкой");
 
         cp('-R', 'staticDecor/dist/', 'staticGit');
@@ -29,9 +30,7 @@ exec('buster generate', function() {
             console.log("Отправка стаческого блога");
 
 
-            exec('cd staticGit && git add . && git commit -m"' + commitMesg + '" && git push', function(code, output) {
-                console.timeEnd("Время выполнения ");
-            });
+            exec('cd staticGit && git add . && git commit -m"' + commitMesg + '" && git push');
         })
 
     });
