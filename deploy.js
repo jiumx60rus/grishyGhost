@@ -1,63 +1,79 @@
-var exec = require('child_process').exec;
+require('shelljs/global');
 
+config.silent = true
 
-var fs = require('fs');
+console.time("Время выполнения ");
 
-var deleteFolderRecursive = function(path) {
-    if (fs.existsSync(path)) {
-        fs.readdirSync(path).forEach(function(file, index) {
-            var curPath = path + "/" + file;
-            if (fs.lstatSync(curPath).isDirectory()) { // recurse
-                deleteFolderRecursive(curPath);
-            } else { // delete file
-                fs.unlinkSync(curPath);
-            }
-        });
-        fs.rmdirSync(path);
-    }
-};
+rm('-r', 'static');
+rm('-r', 'staticDecor/dist');
 
-deleteFolderRecursive("static");
-// deleteFolderRecursive("staticGit");
-deleteFolderRecursive("staticDecor/dist");
+exec('buster generate', function() {
+    console.log("Сгенерирована копия Ghost сайта");
+    console.log("Запуск оптимизации");
+    console.log("...");
 
-var buster = exec('buster generate',
-    function(error, stdout, stderr) {
-        console.log('stdout: ' + stdout);
-        console.log('stderr: ' + stderr);
-        if (error !== null) {
-            console.log('exec error: ' + error);
-        }
+    exec('cd staticDecor && grunt', function() {
+        console.log("Оптимизированно");
+        console.log("Подготовка перед отправкой");
 
-        var grunt = exec('cd staticDecor && grunt',
-            function(error, stdout, stderr) {
-                console.log('stdout: ' + stdout);
-                console.log('stderr: ' + stderr);
-                if (error !== null) {
-                    console.log('exec error: ' + error);
-                }
+        cp('-R', 'staticDecor/dist/', 'staticGit');
 
-                var commitText = "Blog update: " + new Date();
+        console.log("Скопированно...");
 
-                var push = exec('cp -r staticDecor/dist/ staticGit && cd staticGit && git add -A :/ && git commit -m "' + commitText + '" && git push',
-                    function(error, stdout, stderr) {
-                        console.log('stdout: ' + stdout);
-                        console.log('stderr: ' + stderr);
-                        if (error !== null) {
-                            console.log('exec error: ' + error);
-                        }
+        var commitMesg = "Обновление блога:" + new Date();
 
-                        var push = exec('git add -A :/ && git commit -m "' + commitText + '" && git push',
-                            function(error, stdout, stderr) {
-                                console.log('stdout: ' + stdout);
-                                console.log('stderr: ' + stderr);
-                                if (error !== null) {
-                                    console.log('exec error: ' + error);
-                                }
+        // Работа с git
+        exec('git add .', function() {
+            exec('git commit -m"' + commitMesg + '"', function() {
+                exec('git push', function() {
+                	
+                })
+            })
+        })
 
-                            });
-                    });
-            });
-
+        console.timeEnd("Время выполнения ");
 
     });
+});
+
+
+// var buster = exec('buster generate',
+//     function(error, stdout, stderr) {
+//         console.log('stdout: ' + stdout);
+//         console.log('stderr: ' + stderr);
+//         if (error !== null) {
+//             console.log('exec error: ' + error);
+//         }
+
+//         var grunt = exec('cd staticDecor && grunt',
+//             function(error, stdout, stderr) {
+//                 console.log('stdout: ' + stdout);
+//                 console.log('stderr: ' + stderr);
+//                 if (error !== null) {
+//                     console.log('exec error: ' + error);
+//                 }
+
+//                 var commitText = "Blog update: " + new Date();
+
+//                 var push = exec('cp -r staticDecor/dist/ staticGit && cd staticGit && git add -A :/ && git commit -m "' + commitText + '" && git push',
+//                     function(error, stdout, stderr) {
+//                         console.log('stdout: ' + stdout);
+//                         console.log('stderr: ' + stderr);
+//                         if (error !== null) {
+//                             console.log('exec error: ' + error);
+//                         }
+
+//                         var push = exec('git add -A :/ && git commit -m "' + commitText + '" && git push',
+//                             function(error, stdout, stderr) {
+//                                 console.log('stdout: ' + stdout);
+//                                 console.log('stderr: ' + stderr);
+//                                 if (error !== null) {
+//                                     console.log('exec error: ' + error);
+//                                 }
+
+//                             });
+//                     });
+//             });
+
+
+//     });
