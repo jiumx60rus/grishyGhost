@@ -27,7 +27,13 @@ exec('buster generate', function() {
         // Работа с git
         var commitMesg = "Обновление блога:" + new Date();
 
-        exec('git add . && git commit -m"' + commitMesg + '" && git push', function() {
+        exec('git add . && git commit -m"' + commitMesg + '" && git push', function(code, output) {
+            if (!code) {
+                console.log("Всё готово");
+            } else {
+                console.log(output);
+            }
+     
             console.log("Отправка основного репозитория закончена");
             console.log("Отправка статического блога");
 
