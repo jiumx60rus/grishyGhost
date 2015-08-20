@@ -9,13 +9,13 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="shortcut icon" href="../assets/favicon.png?v=bb5b63421c">
+    <link rel="shortcut icon" href="../assets/favicon.png?v=760b86c14a">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css?v=bb5b63421c">
-    <link rel="stylesheet" type="text/css" href="../assets/css/main.css?v=bb5b63421c">
-    <link rel="stylesheet" type="text/css" href="../assets/css/generate.css?v=bb5b63421c">
-    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css?v=bb5b63421c">
-    <link rel="stylesheet" type="text/css" href="../assets/css/hl.css?v=bb5b63421c">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css?v=760b86c14a">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css?v=760b86c14a">
+    <link rel="stylesheet" type="text/css" href="../assets/css/generate.css?v=760b86c14a">
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css?v=760b86c14a">
+    <link rel="stylesheet" type="text/css" href="../assets/css/hl.css?v=760b86c14a">
     
     
     <link rel="alternate" type="application/rss+xml" title="Grishy.ru" href="../rss/index.html">
@@ -100,13 +100,40 @@
 
 <p><a href="https://ru.wikipedia.org/wiki/Wget"><strong>Wget</strong></a> — свободная неинтерактивная консольная программа для загрузки файлов по сети. Поддерживает протоколы <em>HTTP</em>, <em>FTP</em> и <em>HTTPS</em>, а также поддерживает работу через <em>HTTP</em> прокси-сервер. Программа включена почти во все дистрибутивы <em>GNU/Linux</em>. © Wikipedia</p>
 
-<p>Wget очень удобное приложение командной строки для скачивания файлов через различные протоколы, а именно HTTP. С помощью нескольких дополнительных параметров, Wget превращается в веб-архиватора. Можно рекурсивно пройти по сайту и создать его локальную, автономную копию на своём компьютере. </p>
+<p>Wget очень удобное приложение командной строки для скачивания файлов через различные протоколы, а именно HTTP. С помощью нескольких дополнительных параметров, Wget превращается в веб-архиватора. Можно рекурсивно пройти по сайту и создать его локальную, автономную копию на своём компьютере.</p>
+
+<p>Для Windows она <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">тоже есть</a>, но сам я её там не проверял.</p>
 
 <h3 id="wget">Как мы будем использовать wget</h3>
 
 <p>Будем проходить по всему нашему сайту скачивая то, что отдает нам сервер и загружая все файлы которые нужны для нормально отображения страницы (изображения, скрипты , стили и т.п.) в папку на компьютере.</p>
 
-<p>Для Windows она <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">тоже есть</a>, но сам я её там не проверял.</p>
+<p>Вот что у меня будет скачено для главной страницы:
+<img src="../content/images/2015/08/Screenshot.png" alt="Screenshot"></p>
+
+<h3 id="">Приступаем</h3>
+
+<ul>
+<li>Запускаем свой сайт у себя. Я захожу в папку с Ghost и <code>npm start</code>. Если у вас Wordpress, то можно скачать с <a href="https://bitnami.com/stack/wordpress">Bitnami установщик</a> и т.п.</li>
+</ul>
+
+<pre><code class="language-bash">jiumx@jiumx-All-Series:~/src/ghost$ npm start
+
+&gt; ghost@0.6.4 start /home/jiumx/src/ghost
+&gt; node index
+
+Migrations: Up to date at version 003  
+Ghost is running in development...  
+Listening on 127.0.0.1:2368  
+Url configured as: http://localhost:2368  
+Ctrl+C to shut down
+</code></pre>
+
+<p>Как видите, он запустился на <code>localhost:2368</code> и  если мы откроем в браузере эту ссылку, то там должен быть наш блог.</p>
+
+<ul>
+<li>Используем wget, чтобы получить копию.</li>
+</ul>
         </div>
         
         <div class="post-tags">
@@ -151,7 +178,7 @@
 
 
 
-    <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js?v=bb5b63421c"></script>
-    <script type="text/javascript" src="../assets/js/main.js?v=bb5b63421c"></script>
+    <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js?v=760b86c14a"></script>
+    <script type="text/javascript" src="../assets/js/main.js?v=760b86c14a"></script>
 
 </body>
