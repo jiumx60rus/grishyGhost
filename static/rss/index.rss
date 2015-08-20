@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Grishy.ru</title><description>Блог о программировании</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Thu, 20 Aug 2015 20:07:28 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Генерация статического сайта из любого сайта</title><description>&lt;p&gt;Сейчас рассмотрим как сделать статическую(локальную) копию сайта, если у него нет такой функции в CMS и загружать его на &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;. К слову, если нужен простой сайт, то можно попробовать использовать встроенный в GitHub &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt; и если у вас блог и вам понравилась идея Jekyll, попробуйте &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt;. Я так&lt;/p&gt;</description><link>http://localhost:2368/gienieratsiia-statichieskogho-saita-liubogho-saita/</link><guid isPermaLink="false">9d0ed671-91d1-4c2e-91b0-64bff00bddf7</guid><category>Node.js</category><category>Wget</category><category>Git</category><dc:creator>Sergey</dc:creator><pubDate>Tue, 18 Aug 2015 21:11:46 GMT</pubDate><media:content url="http://localhost:2368/content/images/2015/08/wget.jpg" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2015/08/wget.jpg" alt="Генерация статического сайта из любого сайта"&gt;&lt;p&gt;Сейчас рассмотрим как сделать статическую(локальную) копию сайта, если у него нет такой функции в CMS и загружать его на &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;. К слову, если нужен простой сайт, то можно попробовать использовать встроенный в GitHub &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt; и если у вас блог и вам понравилась идея Jekyll, попробуйте &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt;. Я так собираю этот блог на работающий на Ghost. &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Grishy.ru</title><description>Блог о программировании</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Thu, 20 Aug 2015 21:36:32 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Генерация статического сайта из любого сайта</title><description>&lt;p&gt;Сейчас рассмотрим как сделать статическую(локальную) копию сайта, если у него нет такой функции в CMS и загружать его на &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;. К слову, если нужен простой сайт, то можно попробовать использовать встроенный в GitHub &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt; и если у вас блог и вам понравилась идея Jekyll, попробуйте &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt;. Я так&lt;/p&gt;</description><link>http://localhost:2368/gienieratsiia-statichieskogho-saita-liubogho-saita/</link><guid isPermaLink="false">9d0ed671-91d1-4c2e-91b0-64bff00bddf7</guid><category>Node.js</category><category>Wget</category><category>Git</category><dc:creator>Sergey</dc:creator><pubDate>Tue, 18 Aug 2015 21:11:46 GMT</pubDate><media:content url="http://localhost:2368/content/images/2015/08/wget.jpg" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2015/08/wget.jpg" alt="Генерация статического сайта из любого сайта"&gt;&lt;p&gt;Сейчас рассмотрим как сделать статическую(локальную) копию сайта, если у него нет такой функции в CMS и загружать его на &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;. К слову, если нужен простой сайт, то можно попробовать использовать встроенный в GitHub &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt; и если у вас блог и вам понравилась идея Jekyll, попробуйте &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt;. Я так собираю этот блог на работающий на Ghost. &lt;/p&gt;
 
 &lt;p&gt;Легче всего генерировать просто скачав все файлы, которые использует блог для отображения страниц. Грубо говоря зайдя на все страницы сайта и нажать &lt;code&gt;Ctrl+S&lt;/code&gt;. Пользоваться мы будет стандартной в Linux консольной программой &lt;a href="https://ru.wikipedia.org/wiki/Wget"&gt;wget&lt;/a&gt; и делается все это одной простой командой. &lt;/p&gt;
 
@@ -20,7 +20,16 @@
 &lt;h3 id=""&gt;Приступаем&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Запускаем свой сайт у себя. Я захожу в папку с Ghost и &lt;code&gt;npm start&lt;/code&gt;. Если у вас Wordpress, то можно скачать с &lt;a href="https://bitnami.com/stack/wordpress"&gt;Bitnami установщик&lt;/a&gt; и т.п.&lt;/li&gt;
+&lt;li&gt;Запускаем свой сайт у себя. &lt;/li&gt;
+&lt;li&gt;Используем wget, чтобы получить копию.
+&lt;code&gt;wget -r -k -E -nH -Pstatic --restrict-file-name=unix http://localhost:2368/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Загрузить то, что получили на предыдущем шаге на хостинг.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=""&gt;Подробнее&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Я захожу в папку с Ghost и &lt;code&gt;npm start&lt;/code&gt;. Если у вас Wordpress, то можно скачать с &lt;a href="https://bitnami.com/stack/wordpress"&gt;Bitnami установщик&lt;/a&gt; и т.п.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class="language-bash"&gt;jiumx@jiumx-All-Series:~/src/ghost$ npm start
@@ -35,10 +44,64 @@ Url configured as: http://localhost:2368
 Ctrl+C to shut down
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Как видите, он запустился на &lt;code&gt;localhost:2368&lt;/code&gt; и  если мы откроем в браузере эту ссылку, то там должен быть наш блог.&lt;/p&gt;
+&lt;p&gt;Как видите, он запустился на &lt;code&gt;localhost:2368&lt;/code&gt; и  если мы откроем в браузере эту ссылку, то там должен быть наш блог. Он доступен только с нашего компьютера и каждая страница генерируется по запросу от пользователя.&lt;/p&gt;
+
+&lt;hr&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Используем wget, чтобы получить копию.&lt;/li&gt;
+&lt;li&gt;И так приступим к разбору этой большой и сложной команды в пункте 2 :)
+&lt;ol&gt;&lt;li&gt;&lt;code&gt;wget&lt;/code&gt; - программа, которую мы хотим запустить.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-r&lt;/code&gt; - рекурсивно проходить по ссылкам на страницах.
+Например программа заходит на главную страницу скачивает её и видит ссылку на первый пост, переходит к посту, там тоже ссылки на другие страницы и все повторяется. Таким образом она пройдёт по всему сайту, который доступен пользователю.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-k&lt;/code&gt; - превратить абсолютные ссылки в документе в относительные ссылки. То есть &lt;code&gt;grishy.ru/post-simple&lt;/code&gt; будет переделан в &lt;code&gt;post-simple&lt;/code&gt;. Это нужно для того, чтобы сгенерированная копия не зависела от имени сайта и работала в любой папке.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-E&lt;/code&gt; - добавлять расширение &lt;code&gt;.html&lt;/code&gt; загруженным страницам. Нужно для локального просмотра.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-nH&lt;/code&gt; - Отключает создание хост-каталога. По умолчания запуск wget создаст структуру каталогов, начиная с localhost:2368.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-Pstatic&lt;/code&gt; - Определяет в какую папку загружать сайт. В данном случае выбрана папка &lt;em&gt;static&lt;/em&gt;. Иначе все файлы просто вывалятся в директорию, откуда была запущена программа.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--restrict-file-name=unix&lt;/code&gt; - Определяет набор символов, разрешённых в URL. По умолчанию wget экранирует символы, которые не могут быть частью имени файла в вашей операционной системе, а также управляющие символы, как правило непечатные. Иначе у могут появится весёлые названия типа &lt;code&gt;/\321%81ка\321%87а\321%82\321%8C&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://localhost:2368/&lt;/code&gt; - URL на сайт для копирования. Можно указать URL не только на своём компьютере, а например небольшой сайт для проверки :)&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Так как мы работаем в пределах своего компа, то копия создается очень быстро. Насколько?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;ЗАВЕРШЕНО --2015-08-21 00:16:50--
+Общее время: 1,0s
+Загружено: 33 файлов, 5,1M за 0,7s (7,24 MB/s)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;После запуска и выполнения программы у нас будет аккуратная папочка static с сайтом.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;jiumx@jiumx-All-Series:~/src/123$ tree . -d  
+.
+└── statis
+    ├── about
+    ├── assets
+    │   ├── css
+    │   ├── fonts
+    │   ├── images
+    │   └── js
+    ├── content
+    │   └── images
+    │       └── 2015
+    │           └── 08
+    ├── gienieratsiia-statichieskogho-saita-liubogho-saita
+    ├── pochiemu-ghost
+    ├── projects
+    ├── rss
+    └── tag
+        ├── ghost-tag
+        ├── git
+        ├── node-js
+        ├── optimizatsiia
+        ├── wget
+        └── wordpress
+
+22 directories  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;ul&gt;
+&lt;li&gt;И осталось только показать наш блог всем. Я перед этим ещё его оптимизирую, но это не обязательно :). Регистрируемся на GitHub...&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title>Почему Ghost</title><description>&lt;p&gt;Всем привет! Решил завести свой блог, но не просто на &lt;a href="https://wordpress.org/"&gt;Wordpress&lt;/a&gt; или подобный &lt;a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D1%8B%D0%BC"&gt;CMS&lt;/a&gt;, а на &lt;a href="https://ghost.org/"&gt;Ghost&lt;/a&gt;. Выбирал я движок для статического блога и многие части Wordress и таких же больших систем мне были просто не нужны, хотя можно было взять что угодно :) . Вот почему я выбрал именно его.&lt;/p&gt;
 
 &lt;ul&gt;

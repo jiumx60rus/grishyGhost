@@ -27,7 +27,10 @@ exec('buster generate', function() {
 
 
         // Работа с git
-        var commitMesg = "Обновление блога:" + moment().format("LL");
+        var emoji = [':ghost:', ':sunglasses:', ':boom:', ':skull:', ':speech_balloon:',
+            ':rage3:', ':waning_gibbous_moon:', ':tada:', ':pushpin:', ':wink:', ':hankey:'
+        ]
+        var commitMesg = rand(emoji) + " Обновление блога от: " + moment().format("LL") + rand(emoji);
 
         exec('git add . && git commit -m"' + commitMesg + '" && git push', function(code, output) {
             if (!code) {
@@ -51,3 +54,9 @@ exec('buster generate', function() {
 
     });
 });
+
+
+function rand(arr) {
+    var rand = Math.floor(Math.random() * arr.length);
+    return arr[rand];
+}
