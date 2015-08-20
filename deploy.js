@@ -4,7 +4,7 @@ config.silent = true
 
 console.time("Время выполнения");
 
-rm('-r', 'static');
+// rm('-r', 'static');
 rm('-r', 'staticDecor/dist');
 
 exec('buster generate', function() {

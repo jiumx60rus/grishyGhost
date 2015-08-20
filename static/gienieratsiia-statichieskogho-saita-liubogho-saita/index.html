@@ -9,17 +9,16 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="shortcut icon" href="../assets/favicon.png?v=5023a8d207">
+    <link rel="shortcut icon" href="../assets/favicon.png?v=bb5b63421c">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/main.css?v=5023a8d207">
-    <link rel="stylesheet" type="text/css" href="../assets/css/generate.css?v=5023a8d207">
-    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css?v=5023a8d207">
-    <link rel="stylesheet" type="text/css" href="../assets/css/hl.css?v=5023a8d207">
-    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css?v=5023a8d207">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css?v=bb5b63421c">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css?v=bb5b63421c">
+    <link rel="stylesheet" type="text/css" href="../assets/css/generate.css?v=bb5b63421c">
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css?v=bb5b63421c">
+    <link rel="stylesheet" type="text/css" href="../assets/css/hl.css?v=bb5b63421c">
     
     
     <link rel="alternate" type="application/rss+xml" title="Grishy.ru" href="../rss/index.html">
-
 </head>
 
 <body>
@@ -93,8 +92,21 @@
 
 
         <div class="post-text">
-            <p>Сейчас рассмотрим как сделать статическую(локальную) копию сайта, если у него нет такой функции в CMS и загружать его на <a href="https://pages.github.com/">GitHub Pages</a>. К слову, если нужен простой сайт, то можно попробовать использовать встроенный в GitHub <a href="https://github.com/jekyll/jekyll">Jekyll</a> и если у вас блог и вам понравилась идея Jekyll, попробуйте <a href="http://octopress.org/">Octopress</a>. Я так собираю этот блог на работающий на Ghost. Легче всего это сделать просто скачав все файлы, которые использует блог для отображения страниц. Грубо говоря зайдя на все страницы сайта и нажать <code>Ctrl+S</code>. Пользоваться мы будет стандартной в Linux консольной программой <a href="https://ru.wikipedia.org/wiki/Wget">Wget</a> и делается все это одной простой командой.
-Для Windows она <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">тоже есть</a>, но сам я её там не проверял.</p>
+            <p>Сейчас рассмотрим как сделать статическую(локальную) копию сайта, если у него нет такой функции в CMS и загружать его на <a href="https://pages.github.com/">GitHub Pages</a>. К слову, если нужен простой сайт, то можно попробовать использовать встроенный в GitHub <a href="https://github.com/jekyll/jekyll">Jekyll</a> и если у вас блог и вам понравилась идея Jekyll, попробуйте <a href="http://octopress.org/">Octopress</a>. Я так собираю этот блог на работающий на Ghost. </p>
+
+<p>Легче всего генерировать просто скачав все файлы, которые использует блог для отображения страниц. Грубо говоря зайдя на все страницы сайта и нажать <code>Ctrl+S</code>. Пользоваться мы будет стандартной в Linux консольной программой <a href="https://ru.wikipedia.org/wiki/Wget">wget</a> и делается все это одной простой командой. </p>
+
+<h3 id="wget">Что такое wget?</h3>
+
+<p><a href="https://ru.wikipedia.org/wiki/Wget"><strong>Wget</strong></a> — свободная неинтерактивная консольная программа для загрузки файлов по сети. Поддерживает протоколы <em>HTTP</em>, <em>FTP</em> и <em>HTTPS</em>, а также поддерживает работу через <em>HTTP</em> прокси-сервер. Программа включена почти во все дистрибутивы <em>GNU/Linux</em>. © Wikipedia</p>
+
+<p>Wget очень удобное приложение командной строки для скачивания файлов через различные протоколы, а именно HTTP. С помощью нескольких дополнительных параметров, Wget превращается в веб-архиватора. Можно рекурсивно пройти по сайту и создать его локальную, автономную копию на своём компьютере. </p>
+
+<h3 id="wget">Как мы будем использовать wget</h3>
+
+<p>Будем проходить по всему нашему сайту скачивая то, что отдает нам сервер и загружая все файлы которые нужны для нормально отображения страницы (изображения, скрипты , стили и т.п.) в папку на компьютере.</p>
+
+<p>Для Windows она <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">тоже есть</a>, но сам я её там не проверял.</p>
         </div>
         
         <div class="post-tags">
@@ -102,7 +114,7 @@
         </div>
 
         <div class="post-comments">
-            <button class="button"><i class="fa fa-comments"></i> Показать комментарии</button>
+            <button class="button"><i class="fa fa-comments"></i> Показать/Написать комментарии</button>
 
             <div id="disqus_thread"></div>
 
@@ -137,10 +149,9 @@
         </div>
     </footer>
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
 
 
-    <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js?v=5023a8d207"></script>
-    <script type="text/javascript" src="../assets/js/main.js?v=5023a8d207"></script>
+    <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js?v=bb5b63421c"></script>
+    <script type="text/javascript" src="../assets/js/main.js?v=bb5b63421c"></script>
 
 </body>
