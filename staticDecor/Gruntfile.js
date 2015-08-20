@@ -94,6 +94,7 @@ module.exports = function(grunt) {
         grunt.file.delete('dist/tidy.css');
 
         grunt.file.write("dist/CNAME", "grishy.ru");
+        grunt.file.write("dist/README.md", "###Мой блог :)");
     });
 
     grunt.registerTask('default', ['reduce', "highlight", "repl", "uglify", "uncss", "uncssTask", /*"inlinecss", */"cssmin"]);
