@@ -1,7 +1,7 @@
 var replace = require("replace");
 var uncss = require('uncss');
-var fs = require('fs')
-
+var fs = require('fs');
+// require('load-grunt-tasks')(grunt);
 
 module.exports = function(grunt) {
 
@@ -55,15 +55,15 @@ module.exports = function(grunt) {
                 }
             }
         },
-        inlinecss: {
-            main: {
+        pageres: {
+            screenshot: {
                 options: {
-                    // extraCss: require("glob").sync("dist/bundle*.css")[0],
-                    preserveMediaQueries: true,
-                    preserveImportant: true
-                },
-                files: {
-                    'dist': 'dist/**/*.html'
+                    urls: 'http://localhost:2368/',
+                    sizes: ['1200x2000'],
+                    dest: 'dist',
+                    delay: 2,
+                    crop: true,
+                    filename: 'screenshot'
                 }
             }
         }
@@ -74,7 +74,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-inline-css');
+    grunt.loadNpmTasks('grunt-criticalcss');
+    grunt.loadNpmTasks('grunt-pageres');
 
 
     grunt.registerTask('repl', function() {
@@ -93,9 +94,12 @@ module.exports = function(grunt) {
         grunt.file.write(glob, grunt.file.read('dist/tidy.css'));
         grunt.file.delete('dist/tidy.css');
 
+        var README = '[Grishy.ru](http://grishy.ru/)\n=== === === === === === === === === === === === === === ==\n Блог о программировании.Сделан на[Ghost](https: //ghost.org/) и своеё генерации в статику. Все оптимизируется :)\n\nАвтоматический скриншот сайта после изменений:\n\n![Screenshot](screenshot.png)';
+
         grunt.file.write("dist/CNAME", "grishy.ru");
-        grunt.file.write("dist/README.md", "###Мой блог :)");
+        grunt.file.write("dist/README.md", README);
+
     });
 
-    grunt.registerTask('default', ['reduce', "highlight", "repl", "uglify", "uncss", "uncssTask", /*"inlinecss", */"cssmin"]);
+    grunt.registerTask('default', ['reduce', "highlight", "repl", "uglify", "uncss", "uncssTask", "pageres", "cssmin"]);
 };
