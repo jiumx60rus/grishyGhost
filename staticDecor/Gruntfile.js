@@ -94,7 +94,7 @@ module.exports = function(grunt) {
         grunt.file.write(glob, grunt.file.read('dist/tidy.css'));
         grunt.file.delete('dist/tidy.css');
 
-        var README = '[Grishy.ru](http://grishy.ru/)\n=== === === === === === === === === === === === === === ==\n Блог о программировании.Сделан на[Ghost](https: //ghost.org/) и своеё генерации в статику. Все оптимизируется :)\n\nАвтоматический скриншот сайта после изменений:\n\n![Screenshot](screenshot.png)';
+        var README = '[Grishy.ru](http://grishy.ru/)\n==========\n Блог о программировании.Сделан на [Ghost](https: //ghost.org/) и своеё генерации в статику. Все оптимизируется :)\n\nАвтоматический скриншот сайта после изменений:\n\n![Screenshot](screenshot.png)';
 
         grunt.file.write("dist/CNAME", "grishy.ru");
         grunt.file.write("dist/README.md", README);
